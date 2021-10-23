@@ -1,0 +1,17 @@
+<h1>Parent Component</h1>
+
+<div>
+  <label>Enter Parent Data: </label>
+  <input type="text" [(ngModel)]="parentData" />
+</div>
+
+<!-- <button (click)="showMessage()">Click Me</button> -->
+
+<div>Entered Input : {{ parentData }}</div>
+
+<div>Data recieved from Child Component: {{ recievedData }}</div>
+
+<app-child
+  [data]="parentData"
+  (onChildData)="onDataRecived($event)"
+></app-child>

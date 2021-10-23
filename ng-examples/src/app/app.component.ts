@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-examples';
-  showMe = false;
+  showMe = true;
 
-  skills = ['html', 'css', 'javascript'];
+  // skills = ['html', 'css', 'javascript'];
+  skills = [1, 2, 3, 4, 5, 6];
 }

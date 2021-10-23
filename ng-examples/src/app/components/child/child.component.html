@@ -1,0 +1,7 @@
+<h1>Child Component</h1>
+
+<div>Data passed from parent component : {{ data }}</div>
+
+<div>Enter child data : <input type="text" [(ngModel)]="childData" /></div>
+<div>Child Data: {{ childData }}</div>
+<button (click)="shareData()">Pass Data To Parent</button>
