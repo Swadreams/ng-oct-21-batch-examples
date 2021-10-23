@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent],
+  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
