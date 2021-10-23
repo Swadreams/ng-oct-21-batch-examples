@@ -19,4 +19,8 @@ export class ChildComponent implements OnInit {
   shareData() {
     this.onChildData.emit(this.childData);
   }
+
+  logParentData() {
+    console.log('Parent Data', this.data);
+  }
 }
