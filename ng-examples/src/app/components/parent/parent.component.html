@@ -1,9 +1,9 @@
 <ng-content></ng-content>
-<h1>Parent Component</h1>
+<h1 #parentTitle>Parent Component</h1>
 
 <div>
   <label>Enter Parent Data: </label>
-  <input type="text" [(ngModel)]="parentData" />
+  <input type="text" [(ngModel)]="parentData" #parentInput />
 </div>
 
 <!-- <button (click)="showMessage()">Click Me</button> -->
@@ -12,7 +12,10 @@
 
 <div>Data recieved from Child Component: {{ recievedData }}</div>
 
+<button (click)="toggleChild()">Toggle Child</button>
+
 <app-child
+  *ngIf="showChild"
   [data]="parentData"
   (onChildData)="onDataRecived($event)"
 ></app-child>

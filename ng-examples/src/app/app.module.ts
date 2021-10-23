@@ -8,9 +8,11 @@ import { BindingComponent } from './components/binding/binding.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { CardComponent } from './components/card/card.component';
+import { DateComponent } from './components/date/date.component';
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent],
+  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent, DateComponent, ContainerComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
