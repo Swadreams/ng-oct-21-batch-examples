@@ -25,12 +25,12 @@ export class ContainerComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit() {
-    console.log('dateComponentRef : ', this.dateComponentRef?.toArray());
-    setInterval(() => {
-      if (this.dateComponentRef) {
-        // this.dateComponentRef.today = new Date();
-        this.dateComponentRef.toArray()[1].today = new Date();
-      }
-    }, 1000);
+    // console.log('dateComponentRef : ', this.dateComponentRef?.toArray());
+    // setInterval(() => {
+    //   if (this.dateComponentRef) {
+    //     // this.dateComponentRef.today = new Date();
+    //     this.dateComponentRef.toArray()[1].today = new Date();
+    //   }
+    // }, 1000);
   }
 }
