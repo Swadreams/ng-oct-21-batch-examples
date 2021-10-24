@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ObservableService } from 'src/app/shared/observable.service';
 
 @Component({
   selector: 'app-observable',
@@ -8,28 +8,27 @@ import { Observable } from 'rxjs';
 })
 export class ObservableComponent implements OnInit {
   data: any;
-  constructor() {}
+  subscriber1: any;
+  subscriber2: any;
+  constructor(private observableService: ObservableService) {}
 
   ngOnInit(): void {
     this.createObservable();
   }
 
   createObservable() {
-    this.data = new Observable((observer) => {
-      setTimeout(() => {
-        observer.next(1);
-      }, 1000);
-      setTimeout(() => {
-        observer.error('Error from observable');
-      }, 2000);
-      setTimeout(() => {
-        observer.complete();
-      }, 3000);
-    });
-
-    this.data.subscribe(
+    this.subscriber1 = this.observableService.getValues().subscribe(
       (res: any) => {
-        console.log(res);
+        this.data = res;
+        console.log('subscriber1 :', res);
+      },
+      (err: any) => console.log('Errro: ', err)
+    );
+
+    this.subscriber2 = this.observableService.getValues().subscribe(
+      (res: any) => {
+        this.subscriber1.unsubscribe();
+        console.log('subscriber2 :', res);
       },
       (err: any) => console.log('Errro: ', err)
     );
