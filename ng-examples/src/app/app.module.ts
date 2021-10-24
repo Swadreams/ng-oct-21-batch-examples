@@ -11,9 +11,24 @@ import { CardComponent } from './components/card/card.component';
 import { DateComponent } from './components/date/date.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { SummaryPipe } from './shared/summary.pipe';
+import { PurepipeComponent } from './components/purepipe/purepipe.component';
+import { FilterPipe } from './shared/filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent, DateComponent, ContainerComponent, ObservableComponent],
+  declarations: [
+    AppComponent,
+    BindingComponent,
+    ParentComponent,
+    ChildComponent,
+    CardComponent,
+    DateComponent,
+    ContainerComponent,
+    ObservableComponent,
+    SummaryPipe,
+    PurepipeComponent,
+    FilterPipe,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

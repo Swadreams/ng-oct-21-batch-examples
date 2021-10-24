@@ -7,6 +7,7 @@ import { ObservableService } from 'src/app/shared/observable.service';
   styleUrls: ['./observable.component.css'],
 })
 export class ObservableComponent implements OnInit {
+  title = 'Observalbe Example';
   data: any;
   subscriber1: any;
   subscriber2: any;

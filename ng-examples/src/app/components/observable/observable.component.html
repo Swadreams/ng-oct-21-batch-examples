@@ -1,3 +1,22 @@
-<p>observable works!</p>
+<h1>{{ title | uppercase }}</h1>
+<h1>{{ title | lowercase }}</h1>
 
 <div>Data recieved: {{ data }}</div>
+
+<h4>
+  <app-date></app-date>
+</h4>
+
+<h3>Amount : {{ "1000" | currency: "INR":"symbol":"2.2-3" }}</h3>
+
+<h3>Number is : {{ "100" | number: "1.2" }}</h3>
+
+<h3>Percentage are : {{ 0.5 | percent }}</h3>
+
+<h4>Summary Pipe</h4>
+<p>
+  {{
+    "The first edition of ISO 4217 was published in 1978. The tables, history and ongoing discussion are maintained by SIX Interbank Clearing on behalf of ISO and the Swiss Association for Standardization."
+      | summary: 20
+  }}
+</p>

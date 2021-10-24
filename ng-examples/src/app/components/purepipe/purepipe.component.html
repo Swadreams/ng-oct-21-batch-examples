@@ -1,0 +1,23 @@
+<p>purepipe works!</p>
+
+<div class="row">
+  Add Element:
+  <div class="col-sm-3">
+    <input type="text" class="form-control" [(ngModel)]="newNumber" />
+  </div>
+  <button class="btn btn-primary col-sm-2" (click)="addNumber()">Add</button>
+</div>
+<br />
+<div class="row">
+  Filter Element:
+  <div class="col-sm-3">
+    <input type="text" class="form-control" [(ngModel)]="filterValue" />
+  </div>
+  <!-- <button class="btn btn-primary col-sm-2">Filter</button> -->
+</div>
+
+<ul>
+  <li *ngFor="let digit of digits | filter: filterValue">
+    {{ digit }}
+  </li>
+</ul>
