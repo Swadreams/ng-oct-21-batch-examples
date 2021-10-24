@@ -10,9 +10,10 @@ import { ChildComponent } from './components/child/child.component';
 import { CardComponent } from './components/card/card.component';
 import { DateComponent } from './components/date/date.component';
 import { ContainerComponent } from './components/container/container.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent, DateComponent, ContainerComponent],
+  declarations: [AppComponent, BindingComponent, ParentComponent, ChildComponent, CardComponent, DateComponent, ContainerComponent, ObservableComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
