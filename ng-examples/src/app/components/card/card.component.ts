@@ -16,10 +16,11 @@ import { DateComponent } from '../date/date.component';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit, AfterContentInit {
-  //@ContentChild(DateComponent) dateComponentRef: DateComponent | undefined;
-  @ContentChildren(DateComponent) dateComponentRef:
+  // @ContentChild(DateComponent) dateComponentRef: DateComponent | undefined;
+  @ContentChildren(DateComponent, { descendants: true }) dateComponentRef:
     | QueryList<DateComponent>
     | undefined;
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -35,6 +36,7 @@ export class CardComponent implements OnInit, AfterContentInit {
   // }
 
   ngAfterContentInit() {
+    // console.log('dateComponentRef :', this.dateComponentRef);
     console.log('dateComponentRef :', this.dateComponentRef?.toArray());
   }
 }
